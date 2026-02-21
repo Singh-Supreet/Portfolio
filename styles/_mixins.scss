@@ -1,0 +1,102 @@
+@use 'variables' as *;
+
+// Responsive breakpoints
+@mixin sm {
+  @media (min-width: #{$bp-sm}) { @content; }
+}
+@mixin md {
+  @media (min-width: #{$bp-md}) { @content; }
+}
+@mixin lg {
+  @media (min-width: #{$bp-lg}) { @content; }
+}
+@mixin xl {
+  @media (min-width: #{$bp-xl}) { @content; }
+}
+
+// Flexbox helpers
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Section container
+@mixin section-container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $space-4;
+
+  @include sm {
+    padding: 0 $space-6;
+  }
+
+  @include lg {
+    padding: 0 $space-8;
+  }
+}
+
+// Section padding
+@mixin section-padding {
+  padding: $space-16 0;
+
+  @include md {
+    padding: $space-24 0;
+  }
+}
+
+// Section title
+@mixin section-title {
+  font-size: $fs-3xl;
+  font-weight: 700;
+  margin-bottom: $space-4;
+  color: var(--text-primary);
+
+  @include md {
+    font-size: $fs-4xl;
+  }
+}
+
+// Card
+@mixin card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: $radius-lg;
+  padding: $space-6;
+  transition: transform $transition-base, box-shadow $transition-base, border-color $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px var(--shadow);
+    border-color: var(--accent);
+  }
+}
+
+// Gradient text
+@mixin gradient-text {
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Truncate text
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Focus ring
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
