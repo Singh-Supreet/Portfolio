@@ -4,9 +4,9 @@ export const personalInfo = {
   name: "Supreet Singh",
   phone: "+91-9313896215",
   email: "singhsupreet1608@gmail.com",
-  github: "https://github.com/singhsupreet1608",
-  linkedin: "https://linkedin.com/in/supreetsingh1608",
-  portfolio: "#",
+  github: "https://github.com/Singh-Supreet",
+  linkedin: "https://linkedin.com/in/supreet--singh/",
+  portfolio: "https://supreet-singh-portfolio.vercel.app/",
   taglines: [
     "Full Stack Developer",
     "React.js & Next.js Expert",
