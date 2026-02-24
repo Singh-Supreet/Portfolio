@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { personalInfo } from "@/data/portfolio";
 import styles from "./Hero.module.scss";
+import Image from "next/image";
 
 const socialLinks = [
   {
@@ -159,8 +160,13 @@ export default function Hero() {
         >
           <div className={styles.avatarRing}>
             <div className={styles.avatarInner}>
-              <span className={styles.avatarInitials}>SS</span>
-            </div>
+              {/* <span className={styles.avatarInitials}>SS</span> */}
+              <Image
+                src="/image/Supreet_Image.jpeg"
+                alt="Supreet Image"
+                fill
+                style={{ objectFit: "cover" }}
+              />            </div>
           </div>
           <div className={styles.badge}>
             <span className={styles.badgeDot} />

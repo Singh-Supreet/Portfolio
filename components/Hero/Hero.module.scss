@@ -267,6 +267,8 @@
   align-items: center;
   justify-content: center;
   animation: spin-slow 8s linear infinite reverse;
+   position: relative;  /* IMPORTANT */
+  overflow: hidden;    /* IMPORTANT */
 }
 
 .avatarInitials {
